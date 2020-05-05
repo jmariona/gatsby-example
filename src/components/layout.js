@@ -1,16 +1,14 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
 import Header from './header'
 import './layout.css'
 
-
-
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`
-		query SiteTitleQuery{
-				site  {
-				siteMetadata  {
+		query SiteTitleQuery {
+			site {
+				siteMetadata {
 					title
 				}
 			}
